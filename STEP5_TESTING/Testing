@@ -1,0 +1,20 @@
+
+Following examples in the assignment:
+
+-Pet eats as expected:
+When pet eats as expected, BWeight (bowl weight) should be at 0 in around 10 minutes(or set to a realistic value) 
+
+- Pet does not eat:
+There will be an alert that food is either: below set threshold or within set threshold for more than 10 minutes
+
+-Food container is empty:
+There will be an alert
+
+-Schedule set within the same timeframe:
+There will be an alert and the user will have to redo the process
+
+-There is still food left in the bowl:
+There will be an alert It will continue pouring until the set threshold, worst case scenario, the next pet eats less.
+
+-There is not enough food in the container:
+There will be an alert but it will continue pouring until the set threshold or until there is no food left.
