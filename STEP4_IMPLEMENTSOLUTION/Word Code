@@ -69,6 +69,7 @@ If Time from Schedule = currTime:
 
 	#check bowl weight
 	If BWeight > SetThreshold:
+		Ring alarm
 		Display “There are still food in the bowl”
 		Read user input (“Continue? Y/N”)
 		If Y:
