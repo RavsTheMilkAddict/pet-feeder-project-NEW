@@ -1,3 +1,23 @@
-This is where the flowchart will be.
-Everything else about this will be in the word file.
+Basic Algorithm:
+The design of the algorithm would be to start by making the user set the schedule and how much food is to be put out first for example: 
+at 12:00, Dispense container 1 with 50 grams of food. At 13:00 dispense container 2 with 75 grams of food, at 14:00 dispense container 3 with 50 grams of food.
+
+At the allotted time, switch to the containers to the one set for the current schedule
+
+Afterwards, the system will check how much food is left in the container, if there is enough food for the set amount, and then check if the bowl is 
+beyond/below the set threshold, then the system will start pouring. If the bowl will be/already is beyond threshold it will alert, if food is not pouring, 
+there’ll be an alert as well.
+
+The system will then check the current weight of the bowl and pour accordingly to the amount that is set. 
+
+The system will then try to pour the food to the set weight, and it will alert the staff if the hatch fails to open. When it reaches the set weight, 
+the hatch will close. It will also alert the staff if the bowl is overflowing by more than 10 grams. (more or less, depending on realistic values)
+
+The system will constantly check the weight of the bowl and will alert the staff if the bowl’s weight remains unchanged after more than a set time.
+(Either implemented so that the staff can set it or set by default to 10 minutes.)
+
+On the next scheduled time, the container will switch to the next schedule, and repeat the whole process.
+
+
+
 
