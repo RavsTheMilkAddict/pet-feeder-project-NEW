@@ -1,4 +1,4 @@
-Basic Algorithm:
+
 The design of the algorithm would be to start by making the user set the schedule and how much food is to be put out first for example: 
 at 12:00, Dispense container 1 with 50 grams of food. At 13:00 dispense container 2 with 75 grams of food, at 14:00 dispense container 3 with 50 grams of food.
 
