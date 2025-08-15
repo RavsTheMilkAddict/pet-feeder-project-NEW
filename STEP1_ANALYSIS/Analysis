@@ -5,15 +5,11 @@ The features:
  
 -it should be able to schedule when the food is poured, the ability to set multiple time schedules and the types of food.
 
--The ability to remove a set schedule.
- 
 -The ability to alert staff when: food is running low on the container, the pets have stopped eating, food is dispensing more than the allotted amount, 
  food failed to dispense 
 
 
 In order to monitor whether the pets are eating their food or not, a weight measurer will be installed on the device. 
-
-
 
 INPUTS:
 -Schedule
