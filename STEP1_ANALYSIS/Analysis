@@ -1,1 +1,42 @@
+STEP 1: Understanding and Defining the Problem
+
+The features:
+-The feeder must have the ability to pour in food for the pets.
+ 
+-it should be able to schedule when the food is poured, the ability to set multiple time schedules and the types of food.
+
+-The ability to remove a set schedule.
+ 
+-The ability to alert staff when: food is running low on the container, the pets have stopped eating, food is dispensing more than the allotted amount, 
+ food failed to dispense 
+
+
+In order to monitor whether the pets are eating their food or not, a weight measurer will be installed on the device. 
+
+
+
+INPUTS:
+-Schedule
+-Food type
+-How much food is left in the container (food level sensor)
+-How much food is left in the bowl (Weight sensor)
+-Whether food is dispensed or not (Food dispenser sensor)
+
+OUTPUTS:
+-The food
+-The alert system
+
+POSSIBLE LIMITATIONS:
+
+
+No ability to pour food on the same time frame (i.e soft cat food and hard cat food can’t be done in the same hour or half hour)
+
+A chance that pets from later schedules may get less food due to previous foods not fully finished by the previous group of pets 
+(if the bowl is left uncleaned by staff). 
+
+There’s no actual way to check whether the pet is eating the food or not, the staff can only guess by the alert about the bowl’s 
+weight being unchanged for more than a certain amount of time.
+
+
+
 
