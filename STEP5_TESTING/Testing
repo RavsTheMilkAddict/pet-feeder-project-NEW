@@ -1,5 +1,5 @@
 
-Following examples in the assignment:
+Following examples from the assignment and adding some more, these test cases and their results are (and should be):
 
 -Pet eats as expected:
 When pet eats as expected, BWeight (bowl weight) should be at 0 in around 10 minutes(or set to a realistic value) 
@@ -14,7 +14,7 @@ There will be an alert
 There will be an alert and the user will have to redo the process
 
 -There is still food left in the bowl:
-There will be an alert It will continue pouring until the set threshold, worst case scenario, the next pet eats less.
+There will be an alert but user can choose to either continue anyway or not, it’ll also keep pouring if there’s no response after 3 minutes
 
 -There is not enough food in the container:
-There will be an alert but it will continue pouring until the set threshold or until there is no food left.
+There will be an alert but it will continue pouring until the set threshold or until there is no food left unless user chooses othewrise.
