@@ -3,6 +3,9 @@ System start
 # This part is to shorten the names of the data type, Container 1, 2, and 3 is tied to the physical containers and so is the food dispenser. 
 # Any new values will not be here (i.e the result of creating the schedule).
 
+Container 1 = C1
+Container 2 = C2
+Container 3 = C3
 
 Schedule = [] 
 The current time = currTime
