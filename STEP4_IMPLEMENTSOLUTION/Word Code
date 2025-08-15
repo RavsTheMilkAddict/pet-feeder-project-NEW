@@ -1,3 +1,4 @@
+
 System start
 
 # This part is to shorten the names of the data type, Container 1, 2, and 3 is tied to the physical containers and so is the food dispenser. 
@@ -22,93 +23,101 @@ Food Dispenser Sensor = Hatch
 
 
 Function make_schedule():
-	Function Made_Schedule[Time, ChosenContainer, SetThreshold]:
-	
-		setTime = read user input (“input time in hh:mm using the 24 hour standard”)
-		Time = setTime
+    Function Made_Schedule[Time, ChosenContainer, SetThreshold]:
+    
+        setTime = read user input (“input time in hh:mm using the 24 hour standard”)
+        Time = setTime
 
-		ChosenContainer = read user input
-		If ChosenContainer <= 0:
-			Display (“chosen container cannot be less than 1”)
-		If ChosenContainer > 3:
-			Display (“there is only 3 containers”)
-		If ChosenContainer == 1:
-			ChosenContainer = C1
-		If ChosenContainer == 2:
-			ChosenContainer = C2
-		If ChosenContainer == 3:
-			ChosenContainer = C3
+        # going along the lines of: if the set time is the same as another schedule, they will 
+           not be able to make the new schedule)
 
-		SetThreshold = read user input(“how much food in grams do you want”)
-	add Made_Schedule(Time, ChosenContainer, SetThreshold) into Schedule
+        If setTime = setTime in Schedule or is less than 30 minutes away from the 
+        Another schedule:
+   	 Display(“you can’t set a schedule in the same timeframe”
+   	 End program
+      
+        ChosenContainer = read user input
+        If ChosenContainer <= 0:
+            Display (“chosen container cannot be less than 1”)
+	Redo selection
+        If ChosenContainer > 3:
+            Display (“there is only 3 containers”)
+	Redo selection
+        If ChosenContainer == 1:
+            ChosenContainer = C1
+        If ChosenContainer == 2:
+            ChosenContainer = C2
+        If ChosenContainer == 3:
+            ChosenContainer = C3
 
-If setTime in Made_Schedule = setTime in Schedule or less than 30 minutes 
-have passed :
-	Display(“you can’t set a schedule in the same timeframe”
-	End program
-Else:
-Add Made_Schedule in Schedule
+        SetThreshold = read user input(“how much food in grams do you want”)
+    
+    Add Made_Schedule(Time, ChosenContainer, SetThreshold) into Schedule
 
 
 #this next part below is to make it so that on the schedule, food will start pouring
 
 If Time from Schedule = currTime:
-	Switch container to ChosenContainer from Schedule
-	
-	# check food level
-	If Threshold == 0%:
-		Display “you have no food left”
-		End program
-	Else:
-		Continue 
+    Switch container to ChosenContainer from Schedule
+    
+    # check food level
+    If Threshold == 0%:
+        Display “you have no food left”
+        End program
+    Else:
+        Continue 
 
-	If Threshold =< 10% and Threshold >= 1%::
-		Display “You are running low on food/you have no food left in your container”
-		Continue
-	
+    If Threshold =< 10% and Threshold >= 1%::
+        Display “You are running low on food/you have no food left in your container”
+         Read user input (“Continue? Y/N”)
+         If Y:
+            Continue
+        If no response after 3 minutes:
+            Continue
+        Else:
+            Display “You chose not to continue”
+            End Program
+    
 
-	#check bowl weight
-	If BWeight > SetThreshold:
-		Ring alarm
-		Display “There are still food in the bowl”
-		Read user input (“Continue? Y/N”)
-		If Y:
-			Continue
-		If no response after 3 minutes:
-			Continue
-		Else:
-			Display “You chose not to continue”
-			End Program
-
-
-	
-	Pour food from bowl
-
-	#check if hatch is open
-	If Hatch is open:
-		Continue
-	Else:
-		Display “the hatch door can’t be opened”
-		Ring alarm
-	
-	#check food weight before closing hatch
-	If Bweight < SetThreshold:
-		Stop pouring
-		Close Hatch
-	If Bweight == SetThreshold for more than 10 minutes:
-		Display pets are not eating
-	Else: 
-		Display “bowl is going beyond threshold”
-	Wait 5 minutes
+    #check bowl weight
+    If BWeight > SetThreshold:
+        Ring alarm
+        Display “There are still food in the bowl”
+        Read user input (“Continue? Y/N”)
+        If Y:
+            Continue
+        If no response after 3 minutes:
+            Continue
+        Else:
+            Display “You chose not to continue”
+            End Program
 
 
-	# so there will be an alert if bowl is unchanged for more than x minute
-	If Bweight =< SetThreshold or BWeight == 0 for more than 10 minutes:
-		Display “pet has stopped eating”
-		Ring alarm
+    
+    Pour food from bowl
 
-	
+    #check if hatch is open
+    If Hatch is open:
+        Continue
+    Else:
+        Display “the hatch door can’t be opened”
+        Ring alarm
+    
+    #check food weight before closing hatch
+    If Bweight < SetThreshold:
+        Stop pouring
+        Close Hatch
+    If Bweight == SetThreshold for more than 10 minutes:
+        Display pets are not eating
+    Else: 
+        Display “bowl is going beyond threshold”
+    Wait 5 minutes
 
-Program End
 
-# I used what little knowledge I had in programming to make this (very little).
+    # so there will be an alert if bowl is unchanged for more than x minute
+    If Bweight =< SetThreshold or BWeight == 0 for more than 10 minutes:
+        Display “pet has stopped eating”
+        Ring alarm
+
+
+Loop until system shuts off or a new schedule is being made
