@@ -21,25 +21,26 @@ Food Dispenser Sensor = Hatch
 # to make a new definition called MadeSchedule.
 
 
-Function make_schedule:
-Function Made_Schedule[Time, ChosenContainer, SetThreshold]:
+Function make_schedule():
+	Function Made_Schedule[Time, ChosenContainer, SetThreshold]:
 	
-setTime = read user input (“input time in hh:mm using the 24 hour standard”)
-Time = setTime
+		setTime = read user input (“input time in hh:mm using the 24 hour standard”)
+		Time = setTime
 
-ChosenContainer = read user input
-If ChosenContainer <= 0:
-	Display (“chosen container cannot be less than 1”)
-If ChosenContainer > 3:
-	Display (“there is only 3 containers”)
-If ChosenContainer == 1:
-ChosenContainer = C1
-If ChosenContainer == 2:
-ChosenContainer = C2
-If ChosenContainer == 3:
-	ChosenContainer = C3
+		ChosenContainer = read user input
+		If ChosenContainer <= 0:
+			Display (“chosen container cannot be less than 1”)
+		If ChosenContainer > 3:
+			Display (“there is only 3 containers”)
+		If ChosenContainer == 1:
+			ChosenContainer = C1
+		If ChosenContainer == 2:
+			ChosenContainer = C2
+		If ChosenContainer == 3:
+			ChosenContainer = C3
 
-SetThreshold = read user input(“how much food in grams do you want”)
+		SetThreshold = read user input(“how much food in grams do you want”)
+	add Made_Schedule(Time, ChosenContainer, SetThreshold) into Schedule
 
 If setTime in Made_Schedule = setTime in Schedule or less than 30 minutes 
 have passed :
@@ -69,13 +70,19 @@ If Time from Schedule = currTime:
 	#check bowl weight
 	If BWeight > SetThreshold:
 		Display “There are still food in the bowl”
-		
-		End program
-	Else:
-		Continue
+		Read user input (“Continue? Y/N”)
+		If Y:
+			Continue
+		If no response after 3 minutes:
+			Continue
+		Else:
+			Display “You chose not to continue”
+			End Program
+
 
 	
 	Pour food from bowl
+
 	#check if hatch is open
 	If Hatch is open:
 		Continue
@@ -91,12 +98,16 @@ If Time from Schedule = currTime:
 		Display pets are not eating
 	Else: 
 		Display “bowl is going beyond threshold”
+	Wait 5 minutes
 
-# so there will be an alert if bowl is unchanged for more than x minute
-If Bweight =< SetThreshold or BWeight == 0 for more than 10 minutes:
-	Display “pet has stopped eating”
-	Ring alarm
+
+	# so there will be an alert if bowl is unchanged for more than x minute
+	If Bweight =< SetThreshold or BWeight == 0 for more than 10 minutes:
+		Display “pet has stopped eating”
+		Ring alarm
 
 	
 
 Program End
+
+# I used what little knowledge I had in programming to make this (very little).
