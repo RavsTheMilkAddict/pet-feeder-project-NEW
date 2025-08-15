@@ -5,6 +5,9 @@ and then add images from the report into the Github.
 I've copied over everything from Section 1 but did not add in anything from Section 3
 to prevent any issues regarding visibility I made sure to make this repository public, for anyone who sees this other than the tutor, this is mostly wordcode.
 
+My "design" was made as a three-container, pet feeder with one bowl, set to dispense food for different pets. the reason its a three container one is that 
+it is not a good idea to mix two-three different foods in one container.
+
 as part of the task is related to asking AI to help in making a professional readme, these were the results. Some of the AI's results are wrong therefore either weren't included. or remade/edited to look better:
 
 🐾 Pet Feeder Project
