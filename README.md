@@ -29,13 +29,12 @@ Getting Started
 To begin using or contributing to this project:
 - Clone the repository:
 git clone https://github.com/RavsTheMilkAddict/pet-feeder-project-NEW.git
-- run the program
+- Review the code
+- Implement the word code into an actual code
 - Add real-time scheduling interface
 - Integrate sensors for food level detection
 - Enable remote control via mobile or web app or integrate a system into the feeder that allows its use through a physical device
-
-Contributing
-Feel free to fork the project and submit pull requests. Contributions are welcome to improve hardware design, software logic, or documentation.
+  
 License 
 This project currently does not specify a license. Please contact the repository owner for usage permissions.
 
