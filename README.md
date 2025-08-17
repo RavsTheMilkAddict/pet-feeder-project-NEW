@@ -1,9 +1,15 @@
 # pet-feeder-project-NEW
-This is the Github part (Section 2) of the IIT Assignment, I am tasked to create the folders for each step that is in the assignments (Step 1, Step 3, and step 4) 
-and then add images from the report into the Github.
+This is the Github part (Section 2) of the IIT Assignment, I am tasked to create the folders for each step that is in the assignments  and then add images of my diagrams and data table from the report into the Github.
 
-I've copied over everything from Section 1 but did not add in anything from Section 3
-to prevent any issues regarding visibility I made sure to make this repository public, for anyone who sees this other than the tutor, this is mostly wordcode.
+The contents in the repository comes from section 1 of my IIT Assignment and follows the instructions of section 2 where I have to separate each step of section 1 into different folders which are:
+Step 1: Understanding and Defining the problem (Analyze)
+Step 2: Organize and Describe the data (Organize)
+Step 3: Plan the Solution (Design the Algorithm)
+Step 4: Implement the Solution (Implementation)
+Step 5: Test and Refine Solutions (Testing)
+
+I've copied over everything from Section 1 of the report, but did not add in anything from Section 3
+to prevent any issues regarding visibility I made sure to make this repository public. For anyone who sees this other than the tutor, this is mostly wordcode.
 
 My "design" was made as a three-container, pet feeder with one bowl, set to dispense food for different pets. the reason its a three container one is that 
 it is not a good idea to mix two-three different foods in one container.
